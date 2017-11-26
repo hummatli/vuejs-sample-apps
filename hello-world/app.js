@@ -1,7 +1,8 @@
 Vue.component('app-username', {
+  props: ['username'],
   data: function() {
     return {
-      username: 'Hummatli'
+      //username: 'Hummatli'
     }
   },
   template: '<p>{{ username }}</p>'

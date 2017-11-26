@@ -8,8 +8,8 @@
   </head>
   <body>
     <div id="app">
-      <app-username></app-username>
-      <app-username></app-username>
+      <app-username v-bind:username="'Hasan'"></app-username>
+      <app-username v-bind:username="'Fariz'"></app-username>
       <p v-bind:class="{updated: name !== 'Sattar'}">{{ name }}</p>
       <p v-if="name !== 'Sattar'">Name updated!</p>
       <button v-on:click="changeName">Change Name</button>
