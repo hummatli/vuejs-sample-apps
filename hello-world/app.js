@@ -15,5 +15,11 @@ new Vue({
       return number % 2 === 0 ? 'green' : 'red'
     }
   }
+})
 
+new Vue({
+  el: "#app2",
+  data: {
+    message: "Hello there"
+  }
 })
