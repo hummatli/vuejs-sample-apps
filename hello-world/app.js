@@ -23,3 +23,11 @@ new Vue({
     message: "Hello there"
   }
 })
+
+new Vue({
+  el: '.username',
+  data: {
+    username: 'Sattar'
+  }
+
+})
