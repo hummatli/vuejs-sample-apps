@@ -14,7 +14,8 @@
       <button v-on:click="addElement">New Element</button>
       <ul>
         <li v-for="el in elements"
-            v-bind:id="'el' + el">Element {{ el }}</li>
+            v-bind:id="'el' + el"
+            v-bind:style="{backgroundColor: getColor(el)}">Element {{ el }}</li>
       </ul>
     </div>
     <script type="text/javascript" src="app.js"></script>
