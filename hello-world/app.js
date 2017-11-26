@@ -1,3 +1,12 @@
+Vue.component('app-username', {
+  data: function() {
+    return {
+      username: 'Hummatli'
+    }
+  },
+  template: '<p>{{ username }}</p>'
+})
+
 new Vue({
   el: '#app',
   data: {
@@ -22,12 +31,4 @@ new Vue({
   data: {
     message: "Hello there"
   }
-})
-
-new Vue({
-  el: '.username',
-  data: {
-    username: 'Sattar'
-  }
-
 })
