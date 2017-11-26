@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>VueJS sample</title>
     <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="app.css">
   </head>
   <body>
     <div id="app">
-      <p>{{ name }}</p>
+      <p v-bind:class="{updated: name !== 'Sattar'}">{{ name }}</p>
       <p v-if="name !== 'Sattar'">Name updated!</p>
       <button v-on:click="changeName">Change Name</button>
 
