@@ -8,7 +8,18 @@
   </head>
   <body>
     <div id="app">
-      
+        <h1>Hobbies</h1>
+        <p v-bind:class="{more: hobbies.length > 3, less: hobbies.length <= 3 }">Hobbies: {{ hobbies.length }}</p>
+        <ul>
+          <app-hobby v-for="hby in hobbies" v-bind:hobby="hby" @hobbyclicked="removeHobby($event)"></app-hobby>
+          <!-- <li
+            v-for="hobby in hobbies"
+            @click="removeHobby(hobby)">{{ hobby.name }}</li> -->
+        </ul>
+        <hr>
+        <p v-if="hobbyDeleted">Hobby deleted!</p>
+        <input type="text" v-model="newHobbyName">
+        <button type="button" name="button" @click="addHobby">New Hobby</button>
     </div>
 
     <script type="text/javascript" src="app.js"></script>
