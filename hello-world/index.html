@@ -10,6 +10,11 @@
       <p>{{ name }}</p>
       <p v-if="name !== 'Sattar'">Name updated!</p>
       <button v-on:click="changeName">Change Name</button>
+
+      <button v-on:click="addElement">New Element</button>
+      <ul>
+        <li v-for="el in elements">Element {{ el }}</li>
+      </ul>
     </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
