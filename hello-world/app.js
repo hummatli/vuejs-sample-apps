@@ -5,7 +5,12 @@ Vue.component('app-username', {
       //username: 'Hummatli'
     }
   },
-  template: '<p>{{ username }}</p>'
+  template: '<p v-on:click="usernameClicked">{{ username }}</p>',
+  methods: {
+    usernameClicked: function() {
+      this.$emit('usrclicked', this.username)
+    }
+  }
 })
 
 new Vue({
@@ -23,6 +28,9 @@ new Vue({
     },
     getColor: function(number) {
       return number % 2 === 0 ? 'green' : 'red'
+    },
+    userWasClicked: function(name) {
+      alert(name)
     }
   }
 })
